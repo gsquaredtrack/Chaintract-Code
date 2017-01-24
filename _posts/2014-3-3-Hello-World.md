@@ -1,9 +1,9 @@
 ---
 layout: post
-title: You're up and running!
+title: Beta Test Tracking
 ---
 
-Next you can update your site name, avatar and other options using the _config.yml file in the root of your repository (shown below).
+See where your package is, as it travels from destination to destinations.
 
 ![_config.yml]({{ site.baseurl }}/images/config.png)
 
