@@ -1,19 +1,154 @@
----
-layout: default
----
+<!DOCTYPE>
+<html>
+	<head>
+		<title>Chaintract</title>
+		<link rel="icon" href="./favicon.ico" type="image/x-icon" />
+		<link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
+	</head>
+	<body>
 
-<div class="posts">
-  {% for post in site.posts %}
-    <article class="post">
+	<h2 id="title"><img src="./logo.png" width="100" width="75" class="cisco-logo" align="middle">Chaintract Contract Creator</h2>
+	<hr>
+	<h5 class="new-contract">Deployed Contract</h5>
+	<table class="highlight centered striped table-data">
+		<thead>
+			<tr>
+				<th>Name</th>
+				<th>Type</th>
+				<th>Target</th>
+				<th>Distance Left</th>
+				<th>Job Status</th>
+				<th></th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class="table-row">
+				<td>John Smith</td>
+				<td>Drive Service</td>
+				<td>Pier 39, San Francisco, CA</td>
+				<td>6 miles</td>
+				<td>In Progress</td>
+				<td><a class="material-icons info">info_outline</a></td>
+			</tr>
+			<tr>
+				<td>Jane Doe</td>
+				<td>Food Delivery</td>
+				<td>65 Monroe st, Castro Valley, CA</td>
+				<td>0 miles</td>
+				<td>Completed</td>
+				<td><a class="material-icons info">info_outline</a></td>
+			</tr>
+		</tbody>
+	</table>
 
-      <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
+	<div class="create-contracts">
+		<h5 class="new-contract">New Contract</h5>
+		<div class="container-fluid questions">
+			<div class="row">
+				<div class="input-field col s5 offset-s1">
+					<select>
+						<option value="" disabled>- Contract Type -</option>
+						<option value="labor" selected>Drive Service</option>
+						<option value="health">Food Delivery</option>
+						<option value="open">Goods Delivery</option>
+					</select>
+					<label>Type:</label>
+				</div>
+				<div class="input-field col s5">
+					<input value="Hashgraph" id="loc" type="text" class="validate">
+          			<label for="loc" class="question-label">Block Chain Network</label>
+				</div>
+			</div>
+ 			<div class="row">
+				<div class="col s4 offset-s1 input-field">
+					<input value="3300 Quimby Rd, San Jose, CA" id="users" type="text" class="validate">
+          			<label for="users" class="question-label">Address</label>
+          		</div>
+          		<div class="col s4 offset-s1 input-field">
+					<input value="$100" id="reward" type="text" class="validate">
+          			<label for="reward" class="question-label">Payment</label>          		
+          		</div>
+			</div>
+			<div class="row">
+				<div class="col s5 offset-s1 input-f">
+					<input type="date" class="datepicker" id="date1" value="2017-07-17">
+					<label for="date1" class="question-label">Start Date:</label>
+				</div>
+				<div class="col s5 input-f">
+					<input value="3301 Quimby Rd, San Jose, CA" id="reward" type="text" class="validate">
+					<label for="date2" class="question-label">Destination:</label>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col s10 offset-s1 new-contract-mid input-field">
+					<textarea class="materialize-textarea" id="question1">Client Username</textarea>
+					<label for="question1" class="question-label"> 1: </label>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col s10 offset-s1 new-contract-mid input-field">
+					<textarea class="materialize-textarea" id="question2">Client Address</textarea>
+					<label for="question2" class="question-label"> 2: </label>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col s10 offset-s1 new-contract-mid input-field">
+					<textarea class="materialize-textarea" id="question3">Price</textarea>
+					<label for="question3" class="question-label"> 3: </label>
+				</div>
 
-      <div class="entry">
-        <iframe src="https://freeboard.io/board/JzQ9dD" height="600" width="800"></iframe>
-        {{ post.excerpt }}
-      </div>
+			</div>
+			<div class="row deploy-button">
+				<button class="btn waves-effect waves-light deploy-btn" type="submit" name="action">Add Question
+				</button>
+			</div>
+			<div class="row deploy-button">
+				<button class="btn waves-effect waves-light deploy-btn" type="submit" name="action"formaction="/maps.html">Deploy Contract
+					<i class="material-icons right">cloud</i>
+				</button>
+			</div>
+		</div>
 
-      <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More...</a>
-    </article>
-  {% endfor %}
-</div>
+		  <div id="modal1" class="modal">
+		    <div class="modal-content">
+		      <h4 class="dash-title">Contract Deployment</h4>
+		      <p class="dash-text"> Phone Number: +1 972-532-0217</p>
+		      <p class="dash-text"> Address: 0xCeD920F9a0d44455fa90734Dbbf5d7D4ff2df557</p>
+		      <canvas id="myChart"></canvas>
+		      <p class="dash-bold">Questions:</p>
+		      <p class="dash-text">Username</p>
+		      <p class="dash-text">Address</p>
+		      <p class="dash-text">Price</p>
+			<table class="highlight centered striped">
+				<thead>
+					<tr>
+						<th>Contractor</th>
+						<th>Q1</th>
+						<th>Q2</th>
+						<th>Q3</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr class="table-row">
+						<td>XXX-XXX-XXXX</td>
+						<td>300 Hours</td>
+						<td>Yes</td>
+						<td>No</td>
+					</tr>
+				</tbody>
+			</table>
+		    </div>
+		    <div class="modal-footer">
+		      <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Done</a>
+		    </div>
+		  </div>
+
+		<link rel="stylesheet" text="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/css/materialize.min.css">
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/js/materialize.min.js"></script>
+		<link rel="stylesheet" text="text/css" href="./main.css">
+		<script src="./main.js"></script>
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.min.js"></script>
+	</body>
+</html>

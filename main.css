@@ -1,0 +1,104 @@
+.cisco-logo {
+	height: 60;
+	width: 100;
+	margin-right: 50px;
+	margin-bottom: 10px;
+	margin-left: 20px;
+}
+
+#title {
+	text-align: center;
+	color: #58585B;
+	font-weight: 300;
+	font-size: 35px;
+	text-align: left;
+}
+
+.dash-title {
+	font-weight: 300;
+	font-size: 30px;
+	color: #58585B;
+}
+
+.dash-text {
+	font-weight: 300;
+}
+
+.dash-bold {
+	font-weight: 500;
+}
+
+.deploy-button {
+	text-align: center;
+}
+
+.deploy-btn {
+	background-color: #049FD9;
+	margin-bottom: 50px;
+}
+
+.deploy-btn:hover {
+	background-color: #64BBE3;
+}
+
+.deploy-btn:focus {
+	background-color: #58585B;
+}
+
+.create-contracts {
+	background-color: #F1F1F1;
+}
+
+.info {
+	color: #049FD9;
+	cursor: hand;
+}
+
+.new-contract {
+	color: #049FD9;
+	font-weight: 300;
+	padding-top: 30px;
+	padding-left: 30px;
+	padding-bottom: 10px;
+}
+
+.more-question {
+	text-align: center;
+}
+
+.add-question {
+	color: #049FD9 !important;
+	margin-bottom: 30px;
+}
+
+.input-field input:focus + label {
+	color: #049FD9 !important;
+}
+
+.input-field input:focus {
+	border-bottom: 1px solid #049FD9 !important;
+	box-shadow: 0 1px 0 0 #049FD9 !important;
+}
+
+.input-field textarea:focus + label {
+	color: #049FD9 !important;
+}
+
+.input-field textarea:focus {
+	border-bottom: 1px solid #049FD9 !important;
+	box-shadow: 0 1px 0 0 #049FD9 !important;
+}
+
+.input-f input:focus {
+	border-bottom: 1px solid #049FD9 !important;
+	box-shadow: 0 1px 0 0 #049FD9 !important;
+}
+
+.input-f input:focus + label {
+	color: #049FD9 !important;	
+}
+
+ul.dropdown-content.select-dropdown li span {
+	color: #049FD9;
+}
+
