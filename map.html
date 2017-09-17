@@ -14,11 +14,12 @@ layout: default
 
       <div class="entry">
         <iframe src="https://freeboard.io/board/JzQ9dD" height="600" width="800"></iframe>
-		<iframe src="analysis_connectoriginstodestinations.html" height="600" width="800"></iframe>
         {{ post.excerpt }}
       </div>
 
-      <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More...</a>
+      <form action="analysis_connectoriginstodestinations.html">
+		<input type="submit" value="Destination Calculator" />
+	  </form>
     </article>
   {% endfor %}
 </div>
