@@ -1,0 +1,61 @@
+{
+	"variables": [],
+	"info": {
+		"name": "Safe Alerts API",
+		"_postman_id": "29d2e057-d5f8-fd9f-a41e-b67c894723a5",
+		"description": "Get contextual safety-focused alerts that indicate the accident risk type for a specified location. Safe Alerts identifies accident \"hot spots\" and their corresponding categories (e.g., side swipe, rear ending) and is based on historical accident information.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get Safe Alerts",
+			"request": {
+				"url": {
+					"raw": "https://api-beta.arity.com/safeAlert/v1/location?geometry={{geometry}}&radius=0.001",
+					"protocol": "https",
+					"host": [
+						"api-beta",
+						"arity",
+						"com"
+					],
+					"path": [
+						"safeAlert",
+						"v1",
+						"location"
+					],
+					"query": [
+						{
+							"key": "geometry",
+							"value": "{{geometry}}",
+							"equals": true,
+							"description": "Area or road segment(s) to be searched, given as a geometry in Well Known Text format. Can be given as LINESTRING, POINT, or POLYGON with latitude(s) and longitude(s). For example, the following geometry defines a portion near Chicago in Well Known Text: LINESTRING(-87.91007637 42.14410754, -87.90775895 42.13950938)."
+						},
+						{
+							"key": "radius",
+							"value": "0.001",
+							"equals": true,
+							"description": "Decimal value determining radius in decimal degrees of the area to be searched via the queryMethod. Radius value of less than 0.01 should be used. If no radius in decimal degrees is given, the default will be 0.001 (representing a radius about the size of a neighborhood)."
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/xml, application/json",
+						"description": ""
+					},
+					{
+						"key": "Accept",
+						"value": "{{Accept}}",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": "Get alerts that indicate accident risks for a specified location. Safe Alerts identifies accident \"hot spots\" and their corresponding categories (e.g., side swipe, hit fixed object, rear ending, etc.) and is based on historical accident information.  Requires location geometry to be specified in Well Known Text format. "
+			},
+			"response": []
+		}
+	]
+}
